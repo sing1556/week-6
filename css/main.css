@@ -1,0 +1,42 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* space is Descendent selector */
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* space is Descendent selector */
+
+nac ul li {
+    flex: 1;
+}
+
+/* > is Direct Child Selector */
+
+main>p {
+    font-size: 1.5rem;
+}
+
+/* + is Adjacent Sibling Selector */
+
+h2+p {
+    background-color: black;
+    background: white;
+    padding: 1rem;
+}
+
+.stars span {
+    cursor: pointer;
+}
+
+/* ~ is Sibling Selector */
+.stars span:hover~span {
+    opacity: .5;
+}
