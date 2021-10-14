@@ -1,3 +1,5 @@
+
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -14,7 +16,7 @@ nav ul {
 
 /* space is Descendent selector */
 
-nac ul li {
+nav ul li {
     flex: 1;
 }
 
@@ -39,4 +41,48 @@ h2+p {
 /* ~ is Sibling Selector */
 .stars span:hover~span {
     opacity: .5;
+}
+
+/* [] is Attribute Selector */
+
+a[href+"#"] {
+    color: tomato;
+}
+
+a[href^="http"] {
+    border-left: 4px solid tomato
+}
+
+/* :: is for Pseudo elements */
+
+a[href$=".pdf"]::after {
+    border: 2px solid black;
+    content: "\2913";
+    font-weight: bold;
+    color: tomato;
+}
+
+h2+p::first-line {
+    color: tomato;
+}
+
+h2+p::first-letter {
+    font-size: 3em;
+}
+
+/* state related Psuedo classes */
+
+/* LoVe HAte */
+
+nav a,
+nav a:link,
+nav a:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform .5s;
+}
+
+nav a:hover {
+    transform: scale(1.4) translateX(10px)
 }
